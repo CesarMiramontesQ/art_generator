@@ -7,7 +7,7 @@ angle = [0, 90, 180, 270]
 tim = Turtle()
 
 turtle.colormode(255)
-tim.pensize(5)
+tim.pensize(8)
 tim.speed('fastest')
 
 def random_color():
@@ -20,7 +20,7 @@ def random_color():
 def movement(qty):
     for _ in range(qty):
         tim.color(random_color())
-        tim.forward(10)
+        tim.forward(15)
         tim.setheading(random.choice(angle))
 
 
