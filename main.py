@@ -1,13 +1,14 @@
 import turtle
-from turtle import Turtle, Screen
+from turtle import Turtle,Screen
 import random
 
+angle = [0, 90, 180, 270]
+
 tim = Turtle()
-colors = ['blue', 'red', 'green', 'purple', 'pink', 'yellow', 'black', '#2f45ff', '#54ffa4', '#11ff22', '#285078', '#a0c8f0', '#33cc8c' ]
-angle = [90, 180, 270, 360]
+
+turtle.colormode(255)
 tim.pensize(5)
 tim.speed('fastest')
-turtle.colormode(255)
 
 def random_color():
     r = random.randint(0, 255)
@@ -16,17 +17,15 @@ def random_color():
     random_color = (r,g,b)
     return random_color
 
-def draw_shape(num_sides):
-    for _ in range(num_sides):
+def movement(qty):
+    for _ in range(qty):
+        tim.color(random_color())
         tim.forward(10)
         tim.setheading(random.choice(angle))
-        tim.color(random_color())
 
 
-for shape_side_n in range(30):
 
-    draw_shape(shape_side_n)
-
+movement(200)
 
 
 
